@@ -1,0 +1,18 @@
+#! /bin/bash
+
+#Author: Sébastien Gordano
+#Mail: sebastien.gordano@gmail.com
+#Url: https://sebastiengordano.com
+#License: MIT
+
+read -p "Image quality (0-100), [default: 80] ? " choice
+choice=${choice:-80}
+for file in *
+do
+if [[ $(file --mime-type -b "$file") == image/*g ]]; then
+        newfile(){
+                echo "$file" | sed -r 's/(\.[a-z0-9]*$)/.webp/'
+        }
+        cwebp -q $choice "$file" -o "$(newfile)"
+fi
+done
