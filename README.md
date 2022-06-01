@@ -25,7 +25,7 @@ Paste the script in the root directory, add alias to bashrc.
 Open bashrc file in a terminal, or with a file editor:
 
 ```
-$ nano ~/.bashrc
+$ sudoedit ~/.bashrc
 ```
 
 At the end of the file add the alias:
@@ -38,6 +38,12 @@ Save and refresh bashrc file:
 
 ```
 $ source ~/.bashrc
+```
+
+#### Alternative one command:
+
+```
+echo "alias webpC=~/webpC" > ~/.bashrc && source ~/.bashrc
 ```
 
 Now you can launch `webpC` command from every directory you want to convert images.
