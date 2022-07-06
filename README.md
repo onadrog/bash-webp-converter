@@ -43,7 +43,7 @@ $ source ~/.bashrc
 #### Alternative one command:
 
 ```
-echo "alias webpC=~/webpC" > ~/.bashrc && source ~/.bashrc
+echo "alias webpC=~/webpC" >> ~/.bashrc && source ~/.bashrc
 ```
 
 Now you can launch `webpC` command from every directory you want to convert images.
